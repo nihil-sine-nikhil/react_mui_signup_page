@@ -1,15 +1,22 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+
 function Signup() {
-  var es = { margin: 20 };
-  var xx = { padding: 20 };
   return (
     <div>
       <center>
-        <div style={es}>Welcome to My Course. Sign up below</div>
+        <div
+          style={{
+            paddingTop: 140,
+            paddingBottom: 20,
+          }}
+        >
+          <Typography variant={"h6"}>
+            Welcome to My Course. Sign up below
+          </Typography>
+        </div>{" "}
         <Card variant={"outlined"} style={{ width: 400, padding: 20 }}>
           <TextField
             id="outlined-basic"
