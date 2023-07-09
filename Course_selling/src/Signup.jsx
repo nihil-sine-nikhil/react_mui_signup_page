@@ -6,18 +6,32 @@ import Typography from "@mui/material/Typography";
 function Signup() {
   return (
     <div>
-      <center>
-        <div
+      <div
+        style={{
+          paddingTop: 140,
+          paddingBottom: 20,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Typography variant={"h6"}>
+          Welcome to My Course. Sign up below
+        </Typography>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {" "}
+        <Card
+          variant={"outlined"}
           style={{
-            paddingTop: 140,
-            paddingBottom: 20,
+            width: 400,
+            padding: 20,
           }}
         >
-          <Typography variant={"h6"}>
-            Welcome to My Course. Sign up below
-          </Typography>
-        </div>{" "}
-        <Card variant={"outlined"} style={{ width: 400, padding: 20 }}>
           <TextField
             id="outlined-basic"
             fullWidth="true"
@@ -38,7 +52,7 @@ function Signup() {
             Sign up
           </Button>
         </Card>
-      </center>
+      </div>
     </div>
   );
 }
