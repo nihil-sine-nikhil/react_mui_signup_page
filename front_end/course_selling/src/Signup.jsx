@@ -2,8 +2,12 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
+import { useState } from "react";
 
 function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   let style = { margin: 10 };
   return (
     <>
@@ -37,20 +41,44 @@ function Signup() {
           }}
         >
           <TextField
-            id="outlined-basic"
             label="Email"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             variant="outlined"
             fullWidth={true}
             style={style}
           />
           <TextField
-            id="outlined-basic"
             label="Password"
             variant="outlined"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             fullWidth={true}
             style={style}
-          />{" "}
-          <Button variant="contained" style={{ margin: 20 }}>
+          />
+          <Button
+            onClick={() => {
+              fetch("http://localhost:3000/admin/signup", {
+                method: "POST",
+                body: JSON.stringify({
+                  username: email,
+                  password: password,
+                }),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }).then((res) => {
+                res.json().then((data) => {
+                  console.log(data);
+                  alert(JSON.stringify(data));
+                });
+              });
+            }}
+            variant="contained"
+            style={{ margin: 20 }}
+          >
             Sign up
           </Button>
         </Card>
