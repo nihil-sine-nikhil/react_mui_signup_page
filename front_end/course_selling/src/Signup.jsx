@@ -7,33 +7,49 @@ function Signup() {
   let style = { margin: 10 };
   return (
     <>
-      <Typography variant="h6"> Welcom to CourseMera. Sign up below</Typography>
-      <Card
-        variant="outlined"
+      <div
+        style={{ display: "flex", justifyContent: "center", paddingTop: 120 }}
+      >
+        <Typography variant="h6">
+          Welcome to CourseMera. Sign up below
+        </Typography>
+      </div>
+      <br />
+      <div
         style={{
-          padding: 20,
-          width: 500,
-          //   display: "flex",
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: 120,
         }}
       >
-        <TextField
-          id="outlined-basic"
-          label="Email"
+        <Card
           variant="outlined"
-          fullWidth={true}
-          style={style}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Password"
-          variant="outlined"
-          fullWidth={true}
-          style={style}
-        />{" "}
-        <Button variant="contained" style={{ margin: 20 }}>
-          Sign up
-        </Button>
-      </Card>
+          style={{
+            padding: 20,
+            width: 500,
+            borderRadius: 20,
+            //   display: "flex",
+          }}
+        >
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            fullWidth={true}
+            style={style}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Password"
+            variant="outlined"
+            fullWidth={true}
+            style={style}
+          />{" "}
+          <Button variant="contained" style={{ margin: 20 }}>
+            Sign up
+          </Button>
+        </Card>
+      </div>
     </>
   );
 }

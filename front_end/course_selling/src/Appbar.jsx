@@ -9,11 +9,11 @@ function Appbar() {
         <div>
           <Button
             variant="contained"
-            style={{ margin: 20, textAlign: "center" }}
+            style={{ marginRight: 20, textAlign: "center" }}
           >
             Sign up
           </Button>
-          <Button variant="contained" style={{ margin: 20 }}>
+          <Button variant="contained" style={{}}>
             Sign up
           </Button>
         </div>
