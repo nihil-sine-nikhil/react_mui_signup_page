@@ -10,7 +10,12 @@ function Signup() {
       <div
         style={{ display: "flex", justifyContent: "center", paddingTop: 120 }}
       >
-        <Typography variant="h6">
+        <Typography
+          variant="h6"
+          style={{
+            fontWeight: "bold",
+          }}
+        >
           Welcome to CourseMera. Sign up below
         </Typography>
       </div>

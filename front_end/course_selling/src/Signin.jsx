@@ -10,7 +10,14 @@ function Signin() {
       <div
         style={{ display: "flex", justifyContent: "center", paddingTop: 120 }}
       >
-        <Typography variant="h6">Welcome back. Sign in below</Typography>
+        <Typography
+          variant="h6"
+          style={{
+            fontWeight: "bold",
+          }}
+        >
+          Welcome back. Sign in below
+        </Typography>
       </div>
       <br />
       <div
