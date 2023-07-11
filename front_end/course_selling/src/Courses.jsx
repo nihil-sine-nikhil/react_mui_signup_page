@@ -16,7 +16,13 @@ function Courses() {
     });
   }, []);
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
+    >
       {courses.map((e) => {
         return <Course course={e}></Course>;
       })}
