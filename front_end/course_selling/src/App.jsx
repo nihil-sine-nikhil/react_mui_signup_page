@@ -5,6 +5,7 @@ import Appbar from "./Appbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signin from "./Signin";
 import Addcourse from "./Addcourse";
+import Courses from "./Courses";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/addcourse" element={<Addcourse />} />
+          <Route path="/admin/courses" element={<Courses />} />
         </Routes>
       </Router>
     </div>

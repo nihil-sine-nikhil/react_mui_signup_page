@@ -7,6 +7,7 @@ import { useState } from "react";
 function Addcourse() {
   const [course, setCourse] = useState("");
   const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
 
   let style = { margin: 10 };
   return (
@@ -58,6 +59,15 @@ function Addcourse() {
             fullWidth={true}
             style={style}
           />
+          <TextField
+            label="Image Link "
+            onChange={(e) => {
+              setImage(e.target.value);
+            }}
+            variant="outlined"
+            fullWidth={true}
+            style={style}
+          />
 
           <Button
             onClick={() => {
@@ -66,7 +76,7 @@ function Addcourse() {
                 body: JSON.stringify({
                   title: course,
                   description,
-                  imageLink: "",
+                  imageLink: image,
                   published: true,
                 }),
                 headers: {
